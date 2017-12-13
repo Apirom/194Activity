@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Monk.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MonkStoreContainer">
+    <EntitySet Name="Monks" EntityType="Monk.Store.Monks" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Monks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Religion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Blood" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SWno" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Lname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bdate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Pno" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Htown" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tribe" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Bparent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FFname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FLname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ftribe" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MFname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MLname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mage" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mtribe" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sib_num" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sib_ord" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sib_men" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sib_women" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Monk" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="MonkContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Monks" EntityType="Monk.Monk" />
+        </EntityContainer>
+        <EntityType Name="Monk">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cid" Type="String" Nullable="false" />
+          <Property Name="Religion" Type="String" Nullable="false" />
+          <Property Name="Blood" Type="String" Nullable="false" />
+          <Property Name="SWno" Type="String" Nullable="false" />
+          <Property Name="Fname" Type="String" Nullable="false" />
+          <Property Name="Lname" Type="String" Nullable="false" />
+          <Property Name="Bdate" Type="String" Nullable="false" />
+          <Property Name="Age" Type="String" Nullable="false" />
+          <Property Name="Pno" Type="String" Nullable="false" />
+          <Property Name="Htown" Type="String" Nullable="false" />
+          <Property Name="Tribe" Type="String" Nullable="false" />
+          <Property Name="Bparent" Type="String" Nullable="false" />
+          <Property Name="FFname" Type="String" Nullable="false" />
+          <Property Name="FLname" Type="String" Nullable="false" />
+          <Property Name="Fage" Type="String" Nullable="false" />
+          <Property Name="Ftribe" Type="String" Nullable="false" />
+          <Property Name="MFname" Type="String" Nullable="false" />
+          <Property Name="MLname" Type="String" Nullable="false" />
+          <Property Name="Mage" Type="String" Nullable="false" />
+          <Property Name="Mtribe" Type="String" Nullable="false" />
+          <Property Name="Sib_num" Type="String" Nullable="false" />
+          <Property Name="Sib_ord" Type="String" Nullable="false" />
+          <Property Name="Sib_men" Type="String" Nullable="false" />
+          <Property Name="Sib_women" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MonkStoreContainer" CdmEntityContainer="MonkContainer">
+    <EntitySetMapping Name="Monks">
+      <EntityTypeMapping TypeName="IsTypeOf(Monk.Monk)">
+        <MappingFragment StoreEntitySet="Monks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Blood" ColumnName="Blood" />
+          <ScalarProperty Name="SWno" ColumnName="SWno" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Bdate" ColumnName="Bdate" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Pno" ColumnName="Pno" />
+          <ScalarProperty Name="Htown" ColumnName="Htown" />
+          <ScalarProperty Name="Tribe" ColumnName="Tribe" />
+          <ScalarProperty Name="Bparent" ColumnName="Bparent" />
+          <ScalarProperty Name="FFname" ColumnName="FFname" />
+          <ScalarProperty Name="FLname" ColumnName="FLname" />
+          <ScalarProperty Name="Fage" ColumnName="Fage" />
+          <ScalarProperty Name="Ftribe" ColumnName="Ftribe" />
+          <ScalarProperty Name="MFname" ColumnName="MFname" />
+          <ScalarProperty Name="MLname" ColumnName="MLname" />
+          <ScalarProperty Name="Mage" ColumnName="Mage" />
+          <ScalarProperty Name="Mtribe" ColumnName="Mtribe" />
+          <ScalarProperty Name="Sib_num" ColumnName="Sib_num" />
+          <ScalarProperty Name="Sib_ord" ColumnName="Sib_ord" />
+          <ScalarProperty Name="Sib_men" ColumnName="Sib_men" />
+          <ScalarProperty Name="Sib_women" ColumnName="Sib_women" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

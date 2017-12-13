@@ -1,0 +1,171 @@
+﻿@model IEnumerable<WebApplication29.Monk>
+
+@{
+    ViewBag.Title = "Index3";
+}
+
+<h2>Index3</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Religion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Blood)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SWno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Htown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tribe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bparent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FFname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ftribe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MFname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MLname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mtribe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sib_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sib_ord)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sib_men)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sib_women)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Religion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Blood)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SWno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Htown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tribe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bparent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FFname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ftribe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MFname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MLname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mtribe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sib_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sib_ord)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sib_men)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sib_women)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
