@@ -1,0 +1,215 @@
+﻿@model WebApplication29.Monk
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ลบข้อมูล</h2>
+
+<div>
+    <h4>คุณต้องการที่จะลบข้อมูลใช่หรือไม่?</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("เลขบัตรประจำตัวประชาชน")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cid)
+        </dd>
+
+        <dt>
+            @Html.Label("ศาสนา")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+
+        <dt>
+            @Html.Label("กรุ๊ปเลือด")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Blood)
+        </dd>
+
+        <dt>
+            @Html.Label("หมายเลขSW")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SWno)
+        </dd>
+
+        <dt>
+            @Html.Label("ชื่อ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.Label("นามสกุล")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.Label("วัน/เดือน/ปีเกิด")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bdate)
+        </dd>
+
+        <dt>
+            @Html.Label("อายุ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.Label("หมายเลขโทรศัพท์")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pno)
+        </dd>
+
+        <dt>
+            @Html.Label("ภูมิลำเนาเดิม")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Htown)
+        </dd>
+
+        <dt>
+            @Html.Label("ชนเผ่า")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tribe)
+        </dd>
+
+        <dt>
+            @Html.Label("ผู้เลี้ยงดูตั้งแต่กำเนิด")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bparent)
+        </dd>
+
+        <dt>
+            @Html.Label("ชื่อบิดา")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FFname)
+        </dd>
+
+        <dt>
+            @Html.Label("นามสกุล")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FLname)
+        </dd>
+
+        <dt>
+            @Html.Label("อายุ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fage)
+        </dd>
+
+        <dt>
+            @Html.Label("ชนเผ่า")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ftribe)
+        </dd>
+
+        <dt>
+            @Html.Label("ชื่อมารดา")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MFname)
+        </dd>
+
+        <dt>
+            @Html.Label("นามสกุล")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MLname)
+        </dd>
+
+        <dt>
+            @Html.Label("อายุ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mage)
+        </dd>
+
+        <dt>
+            @Html.Label("ชนเผ่า")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mtribe)
+        </dd>
+
+        <dt>
+            @Html.Label("จำนวนพี่น้องท้องเดียวกัน")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sib_num)
+        </dd>
+
+        <dt>
+            @Html.Label("เป็นคนที่")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sib_ord)
+        </dd>
+
+        <dt>
+            @Html.Label("พี่น้องผู้ชาย")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sib_men)
+        </dd>
+
+        <dt>
+            @Html.Label("พี่น้องผู้หญิง")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sib_women)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="ยืนยัน" class="btn btn-default" /> |
+            @Html.ActionLink("กลับสู่หน้าข้อมูล", "Index")
+        </div>
+    }
+</div>
